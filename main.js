@@ -17,7 +17,7 @@ function take_snapshot(){
 
 console.log('ml5.version',ml5.version);
 
-classifier=ml5.imageClassifier("https://teachablemachine.withgoogle.com/models/C2Vex4m7V/model.json",modelLoaded);
+classifier=ml5.imageClassifier("https://teachablemachine.withgoogle.com/models/w1xdUNl9C/model.json",modelLoaded);
 
 function modelLoaded(){
     console.log("modelLoaded");
@@ -43,36 +43,36 @@ function gotResult(error,results){
     }
     else{
         console.log(results);
-        document.getElementById("result_emotion_name").innerHTML=results[0].label;
-        document.getElementById("result_emotion_name2").innerHTML=results[1].label;
+        document.getElementById("result_gesture_name").innerHTML=results[0].label;
+        document.getElementById("result_gesture_name2").innerHTML=results[1].label;
         prediction_1=results[0].label;
         prediction_2=results[1].label;
         speak();
 
-        if(results[0].label=="Happy"){
-            document.getElementById("update_emoji").innerHTML="&#128522";
+        if(results[0].label=="yo"){
+            document.getElementById("update_gesture").innerHTML="yo";
         }
 
-        if(results[0].label=="sad"){
-            document.getElementById("update_emoji").innerHTML="&#128532";
+        if(results[0].label=="nice"){
+            document.getElementById("update_gesture").innerHTML="nice";
         }
 
-        if(results[0].label=="Angry"){
-            document.getElementById("update_emoji").innerHTML="&#128548";
+        if(results[0].label=="Thumbs Up"){
+            document.getElementById("update_gesture").innerHTML="Thumbs Up";
         }
 
 
 
-        if(results[1].label=="Happy"){
-            document.getElementById("update_emoji2").innerHTML="&#128522";
+        if(results[1].label=="Yo"){
+            document.getElementById("update_gesture2").innerHTML="Yo";
         }
 
-        if(results[1].label=="sad"){
-            document.getElementById("update_emoji2").innerHTML="&#128532";
+        if(results[1].label=="nice"){
+            document.getElementById("update_gesture2").innerHTML="nice";
         }
 
-        if(results[1].label=="Angry"){
-            document.getElementById("update_emoji2").innerHTML="&#128548";
+        if(results[1].label=="Thumbs Up"){
+            document.getElementById("update_gesture2").innerHTML="Thumbs Up";
         }
     }
 

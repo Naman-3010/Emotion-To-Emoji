@@ -1,7 +1,7 @@
 body
 {
   color: white;
-  background: #395597;
+  background: #175a02;
 }
 span
 {
@@ -17,11 +17,11 @@ span
 {
   color: black;
 }
-.emotion_name
+.Gesture_name
 {
   font-size: 40px;
 }
-.emoji
+.gesture
 {
   font-size:48px;
 }
